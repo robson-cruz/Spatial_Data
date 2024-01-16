@@ -7,6 +7,8 @@
 
 <br />
 
-# Spatial_Data
+<img alt="Static Badge" src="https://img.shields.io/badge/-Spatial%20Data%20Repository-brightgreen" width="450">
+
+
 
 This repository maintains scripts in Python and R languages used to solve problems with spatial data.
