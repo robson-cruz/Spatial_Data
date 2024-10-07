@@ -29,7 +29,7 @@ def get_data(seq_tad, url):
 
 def wkt_to_shp(data):
     # Check if the 'wktGeomAreaEmbargada' key exists ib=n the json
-    if 'wktGeomAreaEmbargada' in data:
+    if data['wktGeomAreaEmbargada'] is not None:
         # Converts the json to pandas DataFrame
         df = pd.DataFrame([data])
 
@@ -48,8 +48,9 @@ def wkt_to_shp(data):
         # Save the data as GeoJSON
         gdf.to_file('GeoJson_data.geojson', driver='GeoJSON')
     else:
-        raise Exception("Chave 'wktGeomAreaEmbargada' não encontrada no JSON!")
+        raise Exception("Embargo sem geometria!")
 
 
 # Call the function with the 'seqTad'
+# Examples: geometry: 1852258, without geometry: 1454499
 get_data(1852258, URL)
