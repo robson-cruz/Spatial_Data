@@ -37,3 +37,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# pycharm
+__pycache__
+/.env
+
+### VS Code ###
+.vscode
+.idea
+
